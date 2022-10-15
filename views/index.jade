@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h1.hidden= title
+  img(class="logo" src="https://static.hellochange.cn/logo/logo.svg")
+  //- p.desc Mock数据生成接口
+  div.split
+  h2 协议
+  div.cg-table
+    table
+      tr
+        th 协议
+        th 地址
+        th 参数
+      tr
+        td GET
+        td /get
+        td encodeURIComponent(JSON.stringify(
+          a(href="http://mockjs.com/examples.html#Basic" target="_blank") mock规则
+          ))
+      tr
+        td POST
+        td /get
+        td
+          a(href="http://mockjs.com/examples.html#Basic" target="_blank") mock规则
+      tr
+        td POST
+        td /get
+        td encodeURIComponent(JSON.stringify(
+          a(href="http://mockjs.com/examples.html#Basic" target="_blank") mock规则
+          ))

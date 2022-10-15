@@ -1,0 +1,59 @@
+body {
+  padding: 20px 40px;
+}
+
+a {
+  color: #5a66ff;
+  cursor: pointer;
+}
+
+h1.hidden {
+  font-size: 0;
+}
+
+.logo {
+  height: 80px;
+}
+
+p.desc {
+  font-size: 16px;
+  color: #999;
+  text-indent: 5px;
+  line-height: 24px;
+}
+
+.split {
+  height: 40px;
+}
+
+.cg-table {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  font-size: 14px;
+  color: #666;
+  overflow: hidden;
+  border-spacing: 0;
+}
+.cg-table table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+.cg-table th,
+.cg-table td {
+  position: relative;
+  padding: 13px 24px 12px;
+  border-bottom: 1px solid #999;
+  line-height: 22px;
+  font-weight: 400;
+  text-align: left;
+  overflow-wrap: break-word;
+  background-color: inherit;
+}
+
+.cg-table th {
+  font-weight: border;
+  color: #111;
+}

@@ -19,7 +19,6 @@ function getMock(query, next) {
         name: '@name',
         age: '@integer(1,200)',
         id: '@id',
-        // isStudent: '@boolean',
         range: '@range(1,10,2)',
         birthday: '@date("yyyy-yy-yy HH:mm:ss")',
         // joinTime: '@time("HH:mm:ss")',

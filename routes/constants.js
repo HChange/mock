@@ -21,7 +21,6 @@ function getMock(query, next) {
         id: '@id',
         range: '@range(1,10,2)',
         birthday: '@date("yyyy-yy-yy HH:mm:ss")',
-        // joinTime: '@time("HH:mm:ss")',
         requestTime: '@now()',
         icon: '@image("100x100","#5a66ff","#fff","png","HI")',
         color: ['@color()', '@rgba()'],

@@ -10,7 +10,7 @@ router.get('/', (req, res, next) => {
 router.get('/get', (req, res, next) => {
   let data;
   const query = req.query;
-  data = getMock(query, next);
+  data = getMock(query, res);
   if (data) {
     res.send(data);
   }
@@ -19,7 +19,7 @@ router.get('/get', (req, res, next) => {
 router.post('/get', (req, res, next) => {
   let data;
   const query = req.body;
-  data = getMock(query, next);
+  data = getMock(query, res);
   if (data !== undefined) {
     res.send(data);
   }

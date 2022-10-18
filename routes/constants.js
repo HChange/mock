@@ -1,13 +1,14 @@
 let Mock = require('mockjs');
 
-function responseDataTemplate(data, otherQuery) {
+function responseDataTemplate(data,success=true, msg) {
   return {
-    code: 'Success',
+    success,
     data,
+		msg,
   };
 }
 
-function getMock(query, next) {
+function getMock(query, res) {
   const { template, ...otherQuery } = query;
   const { pageSize = 10, pageNum } = otherQuery;
   let currentTemplate = {
@@ -43,12 +44,12 @@ function getMock(query, next) {
         currentTemplate = template;
       }
     } catch (err) {
-      next(err);
+      res.send(responseDataTemplate({},false,err.message||'服务器异常'));
       return;
     }
   }
   const data = Mock.mock(currentTemplate);
-  return responseDataTemplate(data, otherQuery);
+  return responseDataTemplate(data);
 }
 
 module.exports = {

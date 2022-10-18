@@ -3,10 +3,7 @@ let Mock = require('mockjs');
 function responseDataTemplate(data, otherQuery) {
   return {
     code: 'Success',
-    data: {
-      ...data,
-      ...otherQuery,
-    },
+    data,
   };
 }
 

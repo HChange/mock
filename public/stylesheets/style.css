@@ -14,6 +14,15 @@ h1.hidden {
 .logo {
   height: 80px;
 }
+p{
+	padding:0;
+	margin:0;
+	line-height: 24px;
+}
+
+p.indent{
+	text-indent: 16px;
+}
 
 p.desc {
   font-size: 16px;

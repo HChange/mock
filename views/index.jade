@@ -14,21 +14,29 @@ block content
         th 入参
         th 示例
       tr
-        td GET
-        td /get
-        td ?tempalte=encodeURIComponent(JSON.stringify(
-          a(href="http://mockjs.com/examples.html#Basic" target="_blank") mock规则
-          ))
-        td fetch(`/get?tempalte=${encodeURIComponent(JSON.stringify({name:'@cname'}))}`,{
+        td
+          p GET
+        td
+          p /get
+        td
+          p tempalte=encodeURIComponent(JSON.stringify(
+            a(href="http://mockjs.com/examples.html#Basic" target="_blank") mock规则
+            ))
+        td
+          p fetch(`/get?tempalte=${encodeURIComponent(JSON.stringify({name:'@cname'}))}`,{
           p.indent method="GET",
           p })
       tr
-        td POST
-        td /get
-        td {template:
-          a(href="http://mockjs.com/examples.html#Basic" target="_blank") mock规则
-          | }
-        td fetch('/get', {
+        td
+          p POST
+        td
+          p /get
+        td
+          p {template:
+            a(href="http://mockjs.com/examples.html#Basic" target="_blank") mock规则
+            | }
+        td
+          p fetch('/get', {
           p.indent method: 'POST',
           p.indent headers: {'Content-type': 'application/json; charset=UTF-8'},
           p.indent body: JSON.stringify({ template: { name: '@cname' }}),

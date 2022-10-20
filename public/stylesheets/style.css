@@ -21,24 +21,6 @@ p{
 	padding: 2px 4px;
 }
 
-td p{
-	background-color: rgb(231,236,240);
-	margin-bottom: 5px;
-	border-radius: 4px;
-	font-family: 'Times New Roman', Times, serif;
-}
-
-p.indent{
-	text-indent: 16px;
-}
-
-p.desc {
-  font-size: 16px;
-  color: #999;
-  text-indent: 5px;
-  line-height: 24px;
-}
-
 .split {
   height: 40px;
 }
@@ -63,11 +45,8 @@ p.desc {
   position: relative;
   padding: 13px 24px 12px;
   border-bottom: 1px solid #efefef;
-  line-height: 22px;
-  font-weight: 400;
   text-align: left;
   overflow-wrap: break-word;
-  background-color: inherit;
 	vertical-align: top;
 }
 
@@ -76,3 +55,15 @@ p.desc {
   color: #111;
 	background: #efefef;
 }
+
+td p{
+	background-color: rgb(231,236,240);
+	margin-bottom: 5px;
+	border-radius: 4px;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+td p.indent{
+	text-indent: 16px;
+}
+

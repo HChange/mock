@@ -11,18 +11,14 @@ router.get('/get', (req, res, next) => {
   let data;
   const query = req.query;
   data = getMock(query, res);
-  if (data) {
-    res.send(data);
-  }
+  res.send(data);
 });
 
 router.post('/get', (req, res, next) => {
   let data;
   const query = req.body;
   data = getMock(query, res);
-  if (data !== undefined) {
-    res.send(data);
-  }
+  res.send(data);
 });
 
 module.exports = router;

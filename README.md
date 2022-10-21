@@ -1,6 +1,47 @@
 # Chaneg'mock
 
-| 协议 | 地址 | 入参                                                         | 示例                                                         |
-| :--- | :--- | :----------------------------------------------------------- | :----------------------------------------------------------- |
-| GET  | /get | template=encodeURIComponent(JSON.stringify([mock规则](http://mockjs.com/examples.html#Basic))) | fetch(\`/get?template=${encodeURIComponent(JSON.stringify({name:'@cname'}))}\`,{method:"GET"}) |
-| POST | /get | {template:[mock规则](http://mockjs.com/examples.html#Basic)} | `fetch('/get', {  method: 'POST',headers: {'Content-type': 'application/json; charset=UTF-8'},body: JSON.stringify({ template: { name: '@cname' }}),})` |
+## 接口协议
+
+### `/get GET`
+
+- 地址：/get
+- 协议：GET
+- 入参：template=encodeURIComponent(JSON.stringify([mock 规则](http://mockjs.com/examples.html#Basic)))
+- 响应：
+
+```typescript
+{
+  success: boolean;
+  data: any;
+}
+```
+
+- 请求示例：
+
+```javascript
+fetch(`/get?template=${encodeURIComponent(JSON.stringify({ name: '@cname' }))}`, { method: 'GET' });
+```
+
+### `/get POST`
+
+- 地址：/get
+- 协议：POST
+- 入参：{template:[mock 规则](http://mockjs.com/examples.html#Basic)}
+- 响应：
+
+```typescript
+{
+  success: boolean;
+  data: any;
+}
+```
+
+- 请求示例
+
+```javascript
+fetch('/get', {
+  method: 'POST',
+  headers: { 'Content-type': 'application/json; charset=UTF-8' },
+  body: JSON.stringify({ template: { name: '@cname' } }),
+});
+```

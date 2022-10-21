@@ -12,6 +12,7 @@ block content
         th 协议
         th 地址
         th 入参
+        th 响应
         th 示例
       tr
         td
@@ -22,6 +23,11 @@ block content
           p template=encodeURIComponent(JSON.stringify(
             a(href="http://mockjs.com/examples.html#Basic" target="_blank") mock规则
             ))
+        td
+          p {
+          p.indent success: boolean;
+          p.indent data: any;
+          p }
         td
           p fetch(`/get?template=${encodeURIComponent(JSON.stringify({name:'@cname'}))}`,{
           p.indent method:"GET"
@@ -35,6 +41,11 @@ block content
           p {template:
             a(href="http://mockjs.com/examples.html#Basic" target="_blank") mock规则
             | }
+        td
+          p {
+          p.indent success: boolean;
+          p.indent data: any;
+          p }
         td
           p fetch('/get', {
           p.indent method: 'POST',

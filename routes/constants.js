@@ -1,10 +1,10 @@
 let Mock = require('mockjs');
 
-function responseDataTemplate(data,success=true, msg) {
+function responseDataTemplate(data, success = true, msg) {
   return {
     success,
     data,
-		msg,
+    msg,
   };
 }
 
@@ -44,7 +44,7 @@ function getMock(query, res) {
         currentTemplate = template;
       }
     } catch (err) {
-      res.send(responseDataTemplate({},false,err.message||'服务器异常'));
+      res.send(responseDataTemplate({}, false, err.message || '服务器异常'));
       return;
     }
   }

@@ -45,16 +45,21 @@ block content
         td
           p /get
         td
-          p template=encodeURIComponent(JSON.stringify(
+          p template=encodeURIComponent(
+          p.indent JSON.stringify(
+          p.indent
             a(href="http://mockjs.com/examples.html#Basic" target="_blank") mock规则
-            ))
+          p.indent )
+          p )
         td
           p {
           p.indent success: boolean;
           p.indent data: any;
           p }
         td
-          p fetch(`/get?template=${encodeURIComponent(JSON.stringify({name:'@cname'}))}`,{
+          p fetch(`/get?template=${encodeURIComponent(
+          p.indent JSON.stringify({name:'@cname'})
+          p.indent )}`,{
           p.indent method:"GET"
           p })
       tr

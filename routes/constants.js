@@ -8,7 +8,7 @@ function responseDataTemplate(data, success = true, msg) {
   };
 }
 
-function getMock(query, res) {
+async function getMock(query, res) {
   const { template, ...otherQuery } = query;
   const { pageSize = 10, pageNum, sleep=0} = otherQuery;
   let currentTemplate = {
@@ -48,8 +48,20 @@ function getMock(query, res) {
       return;
     }
   }
-  const data = Mock.mock(currentTemplate);
-  return responseDataTemplate(data);
+	/**
+	 *
+	 * @param {object} data
+	 * @returns {Promise<object>}
+	 */
+	const handleSleep = (data)=>{
+		return new Promise((resolve)=>{
+			setTimeout(()=>{
+				resolve(data)
+			},sleep)
+		})
+	}
+  const data = await handleSleep(responseDataTemplate(Mock.mock(currentTemplate)));
+  return data;
 }
 
 module.exports = {

@@ -10,7 +10,7 @@ function responseDataTemplate(data, success = true, msg) {
 
 function getMock(query, res) {
   const { template, ...otherQuery } = query;
-  const { pageSize = 10, pageNum } = otherQuery;
+  const { pageSize = 10, pageNum, sleep=0} = otherQuery;
   let currentTemplate = {
     [`dataList|${pageSize}`]: [
       {
